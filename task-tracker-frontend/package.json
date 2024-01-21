@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-app-rewired build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -36,5 +36,8 @@
     "customize-cra": "^0.2.12",
     "less-loader": "^4.1.0",
     "react-app-rewired": "^2.1.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

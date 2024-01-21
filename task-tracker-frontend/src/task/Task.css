@@ -1,0 +1,40 @@
+.task {
+    padding: 14px 12px;
+}
+
+.task-name {
+    font-size: 18px;
+}
+.task-desc{
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.btn-red{
+    background-color: #fd6161;
+    border-color: #fd6161;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.btn-green {
+    background-color: #00b894;
+    border-color: #00b894;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.ant-checkbox-inner {
+    width: 30px;
+    height: 30px;
+}
+
+.ant-checkbox-inner::after {
+    left: 34%;
+    width: 6.714286px;
+    height: 13.142857px;
+}
+
+.today-text {
+    color:#fd6161;
+    font-weight: 800;
+}

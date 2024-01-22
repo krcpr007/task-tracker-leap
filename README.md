@@ -196,6 +196,13 @@ npm run start
 #### Frontend run on localhost port 3000
 
 
+### Deployment 
+##### `Backend` 
+<p>I tried to deploy on render.com using docker image but it was not working fine</p>
+
+####  `Frontend`
+<p>I deployed frontend on vercel but problem was backend since backend was not working fine so frontend is sending request but no response from backend. Only you can view login and sign up page only with link </p>
+
 ## About Me
 Hii My name is Rajan kumar currently persuing bachelors degree from NIT Patna with Computer Science and Engineering Department.
 

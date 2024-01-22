@@ -1,15 +1,11 @@
-#
-# Build stage
-#
-FROM maven:3.8.2-jdk-11 AS build
-COPY . .
-RUN mvn clean package -Pprod -DskipTests
+FROM maven:3.9.2-eclipse-temurin-17-alpine as builder
 
-#
-# Package stage
-#
-FROM openjdk:11-jdk-slim
-COPY --from=build /target/taskTracker-0.0.1-SNAPSHOT.jar taskTracker.jar
-# ENV PORT=8080
+COPY ./src src/
+COPY ./pom.xml pom.xml
+
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:17-jre-alpine
+COPY --from=builder target/*.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","taskTracker.jar"]
+CMD ["java","-jar","app.jar"]
